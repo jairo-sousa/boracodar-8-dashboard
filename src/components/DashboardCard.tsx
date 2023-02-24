@@ -17,7 +17,9 @@ export function DashboardCard({ children, heading }: DashboardCardProps) {
 			h="fit-content"
 			shadow="3px 4px 26px rgba(0, 0, 0, 0.25)"
 		>
-			<Heading as="h2">{heading}</Heading>
+			<Heading as="h2" textAlign="center" fontSize="2.4rem" fontWeight={600}>
+				{heading}
+			</Heading>
 			{children}
 		</Flex>
 	);

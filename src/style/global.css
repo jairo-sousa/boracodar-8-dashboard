@@ -16,4 +16,7 @@ body,
 
 #root {
 	background-color: #292738;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
