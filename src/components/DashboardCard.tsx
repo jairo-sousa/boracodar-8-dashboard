@@ -14,7 +14,7 @@ export function DashboardCard({ children, heading }: DashboardCardProps) {
 			gap="3.2rem"
 			borderRadius="1.6rem"
 			w="fit-content"
-			h="fit-content"
+			h="100%"
 			shadow="3px 4px 26px rgba(0, 0, 0, 0.25)"
 		>
 			<Heading as="h2" textAlign="center" fontSize="2.4rem" fontWeight={600}>

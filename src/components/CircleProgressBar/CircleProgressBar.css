@@ -1,0 +1,26 @@
+.circle-bg {
+	fill: none;
+	stroke: #d9d9d9;
+	opacity: 0.1;
+}
+
+.circle-progress {
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.percent-text {
+	fill: #ffffff;
+	font-weight: 700;
+	font-size: 3.4rem;
+	line-height: 3.4rem;
+}
+
+.second-text {
+	fill: #ffffff;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 3.4rem;
+	transform: translateY(2.5rem);
+}
