@@ -5,13 +5,16 @@ import "./CircleProgressBar.css";
 type CircleProgressBarProps = {
 	percentage: number;
 	circleDiameter: number;
+	startColor: string;
+	endColor: string;
 };
 
 export function CircleProgressBar({
 	percentage,
 	circleDiameter,
+	startColor,
+	endColor,
 }: CircleProgressBarProps) {
-	//98.5rem shold be the ray
 	const radius = 80;
 	const dashArray = radius * Math.PI * 2;
 	const dashOffset = dashArray - (dashArray * percentage) / 100;
@@ -25,9 +28,12 @@ export function CircleProgressBar({
 				viewBox={`0 0 ${circleDiameter} ${circleDiameter}`}
 			>
 				<defs>
-					<linearGradient id="gradient" gradientTransform="rotate(121.94)">
-						<stop offset="15.98%" stopColor="#ce9ffc" />
-						<stop offset="82.85%" stopColor="#7367F0" />
+					<linearGradient
+						id={`gradient-${startColor}`}
+						gradientTransform="rotate(121.94)"
+					>
+						<stop offset="15.98%" stopColor={startColor} />
+						<stop offset="82.85%" stopColor={endColor} />
 					</linearGradient>
 				</defs>
 				<circle
@@ -48,7 +54,7 @@ export function CircleProgressBar({
 						strokeDashoffset: dashOffset,
 					}}
 					transform={`rotate(-90 ${circleRay} ${circleRay})`}
-					stroke="url(#gradient)"
+					stroke={`url(#gradient-${startColor})`}
 				/>
 				<text y="50%" x="50%" textAnchor="middle" className="percent-text">
 					{percentage}%

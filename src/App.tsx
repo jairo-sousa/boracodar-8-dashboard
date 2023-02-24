@@ -37,7 +37,12 @@ function App() {
 					</Flex>
 				</DashboardCard>
 				<DashboardCard heading="Closed sales">
-					<CircleProgressBar percentage={70} circleDiameter={200} />
+					<CircleProgressBar
+						percentage={70}
+						circleDiameter={200}
+						startColor="#ce9ffc"
+						endColor="#7367F0"
+					/>
 					<Flex
 						gap="1rem"
 						justify="center"
@@ -64,7 +69,12 @@ function App() {
 					</Flex>
 				</DashboardCard>
 				<DashboardCard heading="Monthly goal">
-					<CircleProgressBar percentage={90} circleDiameter={197} />
+					<CircleProgressBar
+						percentage={90}
+						circleDiameter={197}
+						startColor="#DF9780"
+						endColor="#A66DE9"
+					/>
 					<Flex
 						gap="1rem"
 						justify="center"
