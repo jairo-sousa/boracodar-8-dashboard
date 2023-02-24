@@ -1,7 +1,8 @@
-import { Flex, Text, Image, Box } from "@chakra-ui/react";
+import { Flex, Text, Box } from "@chakra-ui/react";
 import { CircleProgressBar } from "./components/CircleProgressBar/CircleProgressBar";
 
 import { DashboardCard } from "./components/DashboardCard";
+import { DashBoardCardFooter } from "./components/DashBoardCardFooter";
 import { NpsCard } from "./components/NpsCard";
 
 function App() {
@@ -18,16 +19,9 @@ function App() {
 			<Flex gap="3.2rem" w="100%" h="37.9rem" justify="center">
 				<DashboardCard heading="General NPS">
 					<NpsCard />
-					<Flex
-						gap="1rem"
-						justify="center"
-						w="20rem"
-						fontSize="1.4rem"
-						fontWeight={400}
-					>
-						<Text>NPS Score</Text> <Text>75</Text>
-					</Flex>
+					<DashBoardCardFooter firstText="NPS Score 75" />
 				</DashboardCard>
+
 				<DashboardCard heading="Closed sales">
 					<CircleProgressBar
 						percentage={70}
@@ -35,31 +29,16 @@ function App() {
 						startColor="#ce9ffc"
 						endColor="#7367F0"
 					/>
-					<Flex
-						gap="1rem"
-						justify="center"
-						align="center"
-						w="fit-content"
-						fontSize="1.4rem"
-						fontWeight={400}
-					>
-						<Flex gap="0.4rem" align="center">
-							<Box bg="#4A4556" w="1.5rem" h="1.5rem" borderRadius="50%"></Box>
-							<Text mr="1rem">Expected 100</Text>
-						</Flex>
-						<Flex gap="0.4rem" align="center">
-							<Box
-								bg="linear-gradient(121.94deg,
-								#CE9FFC 15.98%, #7367F0 82.85%);
-								border-radius: 999px"
-								w="1.5rem"
-								h="1.5rem"
-								borderRadius="50%"
-							></Box>
-							<Text>Achieved 70</Text>
-						</Flex>
-					</Flex>
+					<DashBoardCardFooter
+						firstText="Expected 100"
+						firstCircleBg="#4A4556"
+						secondText="Achieved 70"
+						secondCircleBg="linear-gradient(121.94deg,
+							#CE9FFC 15.98%, #7367F0 82.85%);
+							border-radius: 999px"
+					/>
 				</DashboardCard>
+
 				<DashboardCard heading="Monthly goal">
 					<CircleProgressBar
 						percentage={90}
@@ -67,28 +46,12 @@ function App() {
 						startColor="#DF9780"
 						endColor="#A66DE9"
 					/>
-					<Flex
-						gap="1rem"
-						justify="center"
-						align="center"
-						w="fit-content"
-						fontSize="1.4rem"
-						fontWeight={400}
-					>
-						<Flex gap="0.4rem" align="center">
-							<Box bg="#4A4556" w="1.5rem" h="1.5rem" borderRadius="50%"></Box>
-							<Text mr="1rem">Expected R$ 70K</Text>
-						</Flex>
-						<Flex gap="0.4rem" align="center">
-							<Box
-								bg="linear-gradient(121.94deg, #DF9780 15.98%, #A66DE9 82.85%)"
-								w="1.5rem"
-								h="1.5rem"
-								borderRadius="50%"
-							></Box>
-							<Text>Achieved R$ 63K</Text>
-						</Flex>
-					</Flex>
+					<DashBoardCardFooter
+						firstText="Expected R$ 70K"
+						firstCircleBg="#4A4556"
+						secondText="Achieved R$ 63K"
+						secondCircleBg="linear-gradient(121.94deg, #DF9780 15.98%, #A66DE9 82.85%)"
+					/>
 				</DashboardCard>
 			</Flex>
 			<Flex w="100%" h="31.4rem" justify="center">
