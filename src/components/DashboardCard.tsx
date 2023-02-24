@@ -1,6 +1,11 @@
 import { Flex, Heading } from "@chakra-ui/react";
 
-export function DashboardCard() {
+type DashboardCardProps = {
+	children: React.ReactNode;
+	heading: string;
+};
+
+export function DashboardCard({ children, heading }: DashboardCardProps) {
 	return (
 		<Flex
 			direction="column"
@@ -12,7 +17,8 @@ export function DashboardCard() {
 			h="fit-content"
 			shadow="3px 4px 26px rgba(0, 0, 0, 0.25)"
 		>
-			<Heading as="h2">General NPS</Heading>
+			<Heading as="h2">{heading}</Heading>
+			{children}
 		</Flex>
 	);
 }

@@ -14,10 +14,12 @@ function App() {
 			h="100%"
 		>
 			<Flex>
-				<DashboardCard />
+				<DashboardCard heading="General NPS">SCORES</DashboardCard>
 			</Flex>
 			<Flex>
-				<DashboardCard />
+				<DashboardCard heading="Sales by day of the week">
+					SALES INFO
+				</DashboardCard>
 			</Flex>
 		</Flex>
 	);
