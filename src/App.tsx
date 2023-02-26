@@ -6,7 +6,7 @@ import { DashBoardCardFooter } from "./components/DashBoardCardFooter";
 import { NpsCard } from "./components/NpsCard";
 import { WeekSummary } from "./components/WeekSummary";
 
-function App() {
+export function App() {
 	return (
 		<Flex
 			direction="column"
@@ -66,5 +66,3 @@ function App() {
 		</Flex>
 	);
 }
-
-export default App;
