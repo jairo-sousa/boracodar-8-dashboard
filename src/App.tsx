@@ -1,9 +1,10 @@
-import { Flex, Text, Box } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { CircleProgressBar } from "./components/CircleProgressBar/CircleProgressBar";
 
 import { DashboardCard } from "./components/DashboardCard";
 import { DashBoardCardFooter } from "./components/DashBoardCardFooter";
 import { NpsCard } from "./components/NpsCard";
+import { WeekSummary } from "./components/WeekSummary";
 
 function App() {
 	return (
@@ -54,9 +55,12 @@ function App() {
 					/>
 				</DashboardCard>
 			</Flex>
-			<Flex w="100%" h="31.4rem" justify="center">
-				<DashboardCard heading="Sales by day of the week">
-					<p style={{ width: "97.6rem" }}>SALES INFO</p>
+			<Flex w="100%" justify="center">
+				<DashboardCard>
+					<Heading as="h2" fontSize="2.4rem" fontWeight={600}>
+						Sales by day of the week
+					</Heading>
+					<WeekSummary />
 				</DashboardCard>
 			</Flex>
 		</Flex>

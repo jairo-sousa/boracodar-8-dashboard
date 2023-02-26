@@ -2,7 +2,7 @@ import { Flex, Heading } from "@chakra-ui/react";
 
 type DashboardCardProps = {
 	children: React.ReactNode;
-	heading: string;
+	heading?: string;
 };
 
 export function DashboardCard({ children, heading }: DashboardCardProps) {
@@ -17,9 +17,11 @@ export function DashboardCard({ children, heading }: DashboardCardProps) {
 			h="100%"
 			shadow="3px 4px 26px rgba(0, 0, 0, 0.25)"
 		>
-			<Heading as="h2" textAlign="center" fontSize="2.4rem" fontWeight={600}>
-				{heading}
-			</Heading>
+			{heading && (
+				<Heading as="h2" textAlign="center" fontSize="2.4rem" fontWeight={600}>
+					{heading}
+				</Heading>
+			)}
 			{children}
 		</Flex>
 	);
