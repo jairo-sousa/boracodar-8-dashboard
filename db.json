@@ -3,6 +3,7 @@
 		{
 			"id": 1,
 			"store": "North",
+			"npsGrade": 75,
 			"sales": [
 				{ "day": "monday", "closed": 9, "value": 8000 },
 				{ "day": "Tuesday", "closed": 7, "value": 6000 },
@@ -16,6 +17,7 @@
 		{
 			"id": 2,
 			"store": "North East",
+			"npsGrade": 75,
 			"sales": [
 				{ "day": "monday", "closed": 8, "value": 7000 },
 				{ "day": "Tuesday", "closed": 6, "value": 5000 },
@@ -29,6 +31,7 @@
 		{
 			"id": 3,
 			"store": "Midwest",
+			"npsGrade": 75,
 			"sales": [
 				{ "day": "monday", "closed": 5, "value": 5000 },
 				{ "day": "Tuesday", "closed": 9, "value": 8000 },
@@ -42,6 +45,7 @@
 		{
 			"id": 4,
 			"store": "southeast",
+			"npsGrade": 75,
 			"sales": [
 				{ "day": "monday", "closed": 10, "value": 9000 },
 				{ "day": "Tuesday", "closed": 8, "value": 7000 },
@@ -55,6 +59,7 @@
 		{
 			"id": 5,
 			"store": "south",
+			"npsGrade": 75,
 			"sales": [
 				{ "day": "monday", "closed": 8, "value": 7000 },
 				{ "day": "Tuesday", "closed": 6, "value": 5000 },
