@@ -17,6 +17,13 @@ export function App() {
 		sales: {},
 	});
 
+	const [calculatedData, setSalculatedData] = useState({
+		bestSalesDay: "",
+		lessSalesDay: "",
+		salesPercent: 0,
+		goalsPercent: 0,
+	});
+
 	useEffect(() => {
 		fetchStores();
 	}, []);
@@ -33,8 +40,8 @@ export function App() {
 		>
 			<Flex gap="3.2rem" w="100%" h="37.9rem" justify="center">
 				<DashboardCard heading="General NPS">
-					<NpsCard />
-					<DashBoardCardFooter firstText={`NPS Score 75`} />
+					<NpsCard npsGrade={atualStore.npsGrade} />
+					<DashBoardCardFooter firstText={`NPS Score ${atualStore.npsGrade}`} />
 				</DashboardCard>
 
 				<DashboardCard heading="Closed sales">
