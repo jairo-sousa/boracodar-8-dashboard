@@ -1,12 +1,26 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import { CircleProgressBar } from "./components/CircleProgressBar/CircleProgressBar";
+import { Flex, Heading } from "@chakra-ui/react";
 
+import { CircleProgressBar } from "./components/CircleProgressBar/CircleProgressBar";
 import { DashboardCard } from "./components/DashboardCard";
 import { DashBoardCardFooter } from "./components/DashBoardCardFooter";
 import { NpsCard } from "./components/NpsCard";
 import { WeekSummary } from "./components/WeekSummary";
 
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 export function App() {
+	const [atualStore, setAtualStore] = useState({
+		id: 0,
+		store: "",
+		npsGrade: 0,
+		sales: {},
+	});
+
+	useEffect(() => {
+		fetchStores();
+	}, []);
+
 	return (
 		<Flex
 			direction="column"
@@ -20,10 +34,13 @@ export function App() {
 			<Flex gap="3.2rem" w="100%" h="37.9rem" justify="center">
 				<DashboardCard heading="General NPS">
 					<NpsCard />
-					<DashBoardCardFooter firstText="NPS Score 75" />
+					<DashBoardCardFooter firstText={`NPS Score 75`} />
 				</DashboardCard>
 
 				<DashboardCard heading="Closed sales">
+					{
+						//TODO evaluate percentage, achived and reuse in next card
+					}
 					<CircleProgressBar
 						percentage={70}
 						circleDiameter={200}
@@ -65,4 +82,13 @@ export function App() {
 			</Flex>
 		</Flex>
 	);
+
+	async function fetchStores() {
+		const response = axios
+			.get(
+				`https://my-json-server.typicode.com/jairo-sousa/boracodar-8-dashboard/stores/${1}`
+			)
+			.then((response) => response.data)
+			.then((data) => setAtualStore(data));
+	}
 }
