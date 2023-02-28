@@ -20,6 +20,7 @@ export function CircleProgressBar({
 	const dashOffset = dashArray - (dashArray * percentage) / 100;
 
 	const circleRay = circleDiameter / 2;
+
 	return (
 		<Flex w="100%" direction="column" align="center" gap="0.8rem">
 			<svg
