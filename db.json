@@ -4,71 +4,71 @@
 			"id": 1,
 			"store": "North",
 			"npsGrade": 75,
-			"sales": [
-				{ "day": "monday", "closed": 9, "value": 8000 },
-				{ "day": "Tuesday", "closed": 7, "value": 6000 },
-				{ "day": "Wednesday", "closed": 19, "value": 18000 },
-				{ "day": "Thursday", "closed": 11, "value": 10000 },
-				{ "day": "Friday", "closed": 12, "value": 11000 },
-				{ "day": "Saturday", "closed": 7, "value": 6000 },
-				{ "day": "Sunday", "closed": 5, "value": 4000 }
-			]
+			"sales": {
+				"monday": { "closed": 9, "value": 8000 },
+				"Tuesday": { "closed": 7, "value": 6000 },
+				"Wednesday": { "closed": 19, "value": 18000 },
+				"Thursday": { "closed": 11, "value": 10000 },
+				"Friday": { "closed": 12, "value": 11000 },
+				"Saturday": { "closed": 7, "value": 6000 },
+				"Sunday": { "closed": 5, "value": 4000 }
+			}
 		},
 		{
 			"id": 2,
 			"store": "North East",
 			"npsGrade": 75,
-			"sales": [
-				{ "day": "monday", "closed": 8, "value": 7000 },
-				{ "day": "Tuesday", "closed": 6, "value": 5000 },
-				{ "day": "Wednesday", "closed": 18, "value": 17000 },
-				{ "day": "Thursday", "closed": 10, "value": 9000 },
-				{ "day": "Friday", "closed": 11, "value": 10000 },
-				{ "day": "Saturday", "closed": 6, "value": 5000 },
-				{ "day": "Sunday", "closed": 4, "value": 3000 }
-			]
+			"sales": {
+				"monday": { "closed": 8, "value": 7000 },
+				"Tuesday": { "closed": 6, "value": 5000 },
+				"Wednesday": { "closed": 18, "value": 17000 },
+				"Thursday": { "closed": 10, "value": 9000 },
+				"Friday": { "closed": 11, "value": 10000 },
+				"Saturday": { "closed": 6, "value": 5000 },
+				"Sunday": { "closed": 4, "value": 3000 }
+			}
 		},
 		{
 			"id": 3,
 			"store": "Midwest",
 			"npsGrade": 75,
-			"sales": [
-				{ "day": "monday", "closed": 5, "value": 5000 },
-				{ "day": "Tuesday", "closed": 9, "value": 8000 },
-				{ "day": "Wednesday", "closed": 12, "value": 11000 },
-				{ "day": "Thursday", "closed": 11, "value": 10000 },
-				{ "day": "Friday", "closed": 20, "value": 19000 },
-				{ "day": "Saturday", "closed": 5, "value": 3000 },
-				{ "day": "Sunday", "closed": 7, "value": 5000 }
-			]
+			"sales": {
+				"monday": { "closed": 5, "value": 5000 },
+				"Tuesday": { "closed": 9, "value": 8000 },
+				"Wednesday": { "closed": 12, "value": 11000 },
+				"Thursday": { "closed": 11, "value": 10000 },
+				"Friday": { "closed": 20, "value": 19000 },
+				"Saturday": { "closed": 5, "value": 3000 },
+				"Sunday": { "closed": 7, "value": 5000 }
+			}
 		},
 		{
 			"id": 4,
 			"store": "southeast",
 			"npsGrade": 75,
-			"sales": [
-				{ "day": "monday", "closed": 10, "value": 9000 },
-				{ "day": "Tuesday", "closed": 8, "value": 7000 },
-				{ "day": "Wednesday", "closed": 20, "value": 19000 },
-				{ "day": "Thursday", "closed": 12, "value": 20000 },
-				{ "day": "Friday", "closed": 13, "value": 12000 },
-				{ "day": "Saturday", "closed": 8, "value": 7000 },
-				{ "day": "Sunday", "closed": 6, "value": 8000 }
-			]
+			"sales": {
+				"monday": { "closed": 10, "value": 9000 },
+				"Tuesday": { "closed": 8, "value": 7000 },
+				"Wednesday": { "closed": 20, "value": 19000 },
+				"Thursday": { "closed": 12, "value": 20000 },
+				"Friday": { "closed": 13, "value": 12000 },
+				"Saturday": { "closed": 8, "value": 7000 },
+				"Sunday": { "closed": 6, "value": 8000 }
+			}
 		},
 		{
 			"id": 5,
 			"store": "south",
 			"npsGrade": 75,
-			"sales": [
-				{ "day": "monday", "closed": 8, "value": 7000 },
-				{ "day": "Tuesday", "closed": 6, "value": 5000 },
-				{ "day": "Wednesday", "closed": 18, "value": 17000 },
-				{ "day": "Thursday", "closed": 10, "value": 90000 },
-				{ "day": "Friday", "closed": 10, "value": 10000 },
-				{ "day": "Saturday", "closed": 5, "value": 4000 },
-				{ "day": "Sunday", "closed": 3, "value": 2000 }
-			]
+			"sales": {
+				"monday": { "closed": 8, "value": 7000 },
+				"Tuesday": { "closed": 6, "value": 5000 },
+				"Wednesday": { "closed": 18, "value": 17000 },
+				"Thursday": { "closed": 10, "value": 90000 },
+				"Friday": { "closed": 10, "value": 10000 },
+				"Saturday": { "closed": 5, "value": 4000 },
+				"Sunday": { "closed": 3, "value": 2000 }
+			}
 		}
 	]
 }
