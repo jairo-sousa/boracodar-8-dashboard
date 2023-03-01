@@ -1,10 +1,16 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, keyframes } from "@chakra-ui/react";
 import { WeekDays } from "../types/Weekdays";
 
 type SalesChartProps = {
 	weekDays: WeekDays;
 };
 export function SalesChart({ weekDays }: SalesChartProps) {
+	const upAnimation = keyframes`
+	0%{
+		height: calc(15.9rem * 0.1)
+	}
+	`;
+
 	return (
 		<Flex gap="5.9rem" position="relative" align="end" minH="19.1rem">
 			{weekDays.map((weekDay, i) => {
@@ -22,7 +28,9 @@ export function SalesChart({ weekDays }: SalesChartProps) {
 							h={`calc(15.9rem * ${weekDay.percent ? weekDay.percent : 0.1})`}
 							bg="linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%)"
 							borderRadius="2rem"
+							animation={weekDay.percent ? `${upAnimation} 1.4s` : ""}
 						></Box>
+
 						<Text>{weekDay.day}</Text>
 					</Flex>
 				);
