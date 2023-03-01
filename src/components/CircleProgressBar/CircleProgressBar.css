@@ -1,3 +1,12 @@
+svg {
+	width: 197px;
+	height: 197px;
+}
+
+.svg-text {
+	transform: rotate(90deg);
+	fill: red;
+}
 .circle-bg {
 	fill: none;
 	stroke: #d9d9d9;

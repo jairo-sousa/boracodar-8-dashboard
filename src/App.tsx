@@ -17,7 +17,15 @@ export function App() {
 		id: 0,
 		store: "",
 		npsGrade: 0,
-		sales: {},
+		sales: {
+			monday: { closed: 0, value: 0 },
+			Tuesday: { closed: 0, value: 0 },
+			Wednesday: { closed: 0, value: 0 },
+			Thursday: { closed: 0, value: 0 },
+			Friday: { closed: 0, value: 0 },
+			Saturday: { closed: 0, value: 0 },
+			Sunday: { closed: 0, value: 0 },
+		},
 	});
 
 	const [calculatedData, setCalculatedData] = useState({
@@ -96,7 +104,7 @@ export function App() {
 					<Heading as="h2" fontSize="2.4rem" fontWeight={600}>
 						Sales by day of the week
 					</Heading>
-					<WeekSummary />
+					<WeekSummary sales={atualStore.sales} />
 				</DashboardCard>
 			</Flex>
 		</Flex>

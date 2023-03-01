@@ -1,9 +1,23 @@
 import { Flex, Img, Text } from "@chakra-ui/react";
+
 import { SalesChart } from "./SalesChart";
 
-export function WeekSummary() {
+import { getLessMostValuableProperty } from "../utils/getLessMostValuableProperty";
+
+import { WeekSales } from "../types/WeekSales";
+
+type WeekSummaryProps = {
+	sales: WeekSales;
+};
+export function WeekSummary({ sales }: WeekSummaryProps) {
+	const highlightDays = getLessMostValuableProperty(
+		sales,
+		"closed",
+		sales.monday.value
+	);
+
 	return (
-		<Flex w="97.6rem" justify="space-between">
+		<Flex w="92.8rem" justify="space-between">
 			<Flex direction="column" gap="0.8rem">
 				<Flex gap="0.4rem">
 					<Img src="https://raw.githubusercontent.com/jairo-sousa/boracodar-8-dashboard/main/.github/upArrow.svg"></Img>
@@ -12,7 +26,7 @@ export function WeekSummary() {
 					</Text>
 				</Flex>
 				<Text fontSize="2.4rem" fontWeight={500} mb="2.4rem">
-					Wednesday
+					{highlightDays.highestProperty}
 				</Text>
 
 				<Flex gap="0.4rem">
@@ -22,10 +36,10 @@ export function WeekSummary() {
 					</Text>
 				</Flex>
 				<Text fontSize="2.4rem" fontWeight={500}>
-					Sunday
+					{highlightDays.lowestProperty}
 				</Text>
 			</Flex>
-			<SalesChart />
+			<SalesChart sales={sales} mostSales={highlightDays.highesValue} />
 		</Flex>
 	);
 }
