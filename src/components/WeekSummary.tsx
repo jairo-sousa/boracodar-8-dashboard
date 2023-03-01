@@ -1,10 +1,15 @@
 import { Flex, Img, Text } from "@chakra-ui/react";
 
+//components
 import { SalesChart } from "./SalesChart";
 
+//utils
 import { getLessMostValuableProperty } from "../utils/getLessMostValuableProperty";
+import { GetWeekDays } from "../utils/GetWeekDays";
 
+//types
 import { WeekSales } from "../types/WeekSales";
+import { WeekDays } from "../types/Weekdays";
 
 type WeekSummaryProps = {
 	sales: WeekSales;
@@ -15,6 +20,8 @@ export function WeekSummary({ sales }: WeekSummaryProps) {
 		"closed",
 		sales.monday.value
 	);
+
+	const weekDays = GetWeekDays(sales, highlightDays.highesValue);
 
 	return (
 		<Flex w="92.8rem" justify="space-between">
@@ -39,7 +46,7 @@ export function WeekSummary({ sales }: WeekSummaryProps) {
 					{highlightDays.lowestProperty}
 				</Text>
 			</Flex>
-			<SalesChart sales={sales} mostSales={highlightDays.highesValue} />
+			<SalesChart weekDays={weekDays} />
 		</Flex>
 	);
 }

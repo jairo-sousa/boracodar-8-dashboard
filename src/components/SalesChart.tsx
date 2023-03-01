@@ -1,45 +1,10 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-
-import { WeekSales } from "../types/WeekSales";
-
-import { getPercentage } from "../utils/getPercentage";
+import { WeekDays } from "../types/Weekdays";
 
 type SalesChartProps = {
-	sales: WeekSales;
-	mostSales: number;
+	weekDays: WeekDays;
 };
-export function SalesChart({ sales, mostSales }: SalesChartProps) {
-	const weekDays = [
-		{
-			day: "Sun",
-			percent: getPercentage(mostSales, sales.Sunday.closed),
-		},
-		{
-			day: "Mon",
-			percent: getPercentage(mostSales, sales.monday.closed),
-		},
-		{
-			day: "Tue",
-			percent: getPercentage(mostSales, sales.Tuesday.closed),
-		},
-		{
-			day: "Wed",
-			percent: getPercentage(mostSales, sales.Wednesday.closed),
-		},
-		{
-			day: "Thu",
-			percent: getPercentage(mostSales, sales.Thursday.closed),
-		},
-		{
-			day: "Fri",
-			percent: getPercentage(mostSales, sales.Friday.closed),
-		},
-		{
-			day: "Sat",
-			percent: getPercentage(mostSales, sales.Saturday.closed),
-		},
-	];
-
+export function SalesChart({ weekDays }: SalesChartProps) {
 	return (
 		<Flex gap="5.9rem" position="relative" align="end" minH="19.1rem">
 			{weekDays.map((weekDay, i) => {
