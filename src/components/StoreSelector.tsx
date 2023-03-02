@@ -72,8 +72,6 @@ export function StoreSelector({ store }: StoreSelectorProps) {
 			.then((data) => {
 				setStoreIdList(data);
 			});
-
-		console.log("fetched");
 	}
 
 	function handleClick(params: any[]) {

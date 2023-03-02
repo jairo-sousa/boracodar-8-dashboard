@@ -15,9 +15,11 @@ export function CircleProgressBar({
 	startColor,
 	endColor,
 }: CircleProgressBarProps) {
+	const validatedpercentage = percentage > 100 ? 100 : percentage;
+
 	const radius = 80;
 	const dashArray = radius * Math.PI * 2;
-	const dashOffset = dashArray - (dashArray * percentage) / 100;
+	const dashOffset = dashArray - (dashArray * validatedpercentage) / 100;
 
 	const circleRay = circleDiameter / 2;
 
