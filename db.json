@@ -70,5 +70,6 @@
 				"Sunday": { "closed": 3, "value": 2000 }
 			}
 		}
-	]
+	],
+	"store-id-list": [1, 2, 3, 4, 5]
 }
