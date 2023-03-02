@@ -14,8 +14,10 @@ import axios from "axios";
 import { StoreSelector } from "./components/StoreSelector";
 
 export function App() {
+	const [atualStoreId, setAtualStoreId] = useState(1);
+
 	const [atualStore, setAtualStore] = useState({
-		id: 0,
+		id: 1,
 		store: "",
 		npsGrade: 0,
 		sales: {
@@ -41,10 +43,12 @@ export function App() {
 		expectedGoal: 70000,
 	});
 
+	const renderingId = atualStoreId;
+
 	useEffect(() => {
-		fetchStores();
+		fetchStores(renderingId);
 		percentCalculation();
-	}, []);
+	}, [renderingId]);
 
 	return (
 		<Flex
@@ -56,7 +60,13 @@ export function App() {
 			w="112rem"
 			h="100%"
 		>
-			<StoreSelector store={atualStore.store} />
+			<StoreSelector
+				store={{
+					name: atualStore.store,
+					id: atualStoreId,
+					setAtualStoreId: setAtualStoreId,
+				}}
+			/>
 
 			<Flex
 				gap="3.2rem"
@@ -113,10 +123,10 @@ export function App() {
 		</Flex>
 	);
 
-	async function fetchStores() {
+	async function fetchStores(id: number) {
 		const response = axios
 			.get(
-				`https://my-json-server.typicode.com/jairo-sousa/boracodar-8-dashboard/stores/${1}`
+				`https://my-json-server.typicode.com/jairo-sousa/boracodar-8-dashboard/stores/${id}`
 			)
 			.then((response) => response.data)
 			.then((data) => setAtualStore(data));
