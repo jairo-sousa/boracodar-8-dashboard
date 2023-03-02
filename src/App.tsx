@@ -1,4 +1,4 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, Img, Text } from "@chakra-ui/react";
 
 import { CircleProgressBar } from "./components/CircleProgressBar/CircleProgressBar";
 import { DashboardCard } from "./components/DashboardCard";
@@ -11,6 +11,7 @@ import { getPercentage } from "./utils/getPercentage";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { StoreSelector } from "./components/StoreSelector";
 
 export function App() {
 	const [atualStore, setAtualStore] = useState({
@@ -51,10 +52,12 @@ export function App() {
 			className="App"
 			justify="center"
 			align="center"
-			gap="5.9rem"
+			gap="4rem"
 			w="112rem"
 			h="100%"
 		>
+			<StoreSelector store={atualStore.store} />
+
 			<Flex
 				gap="3.2rem"
 				w="100%"

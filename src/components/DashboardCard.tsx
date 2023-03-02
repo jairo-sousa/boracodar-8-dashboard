@@ -3,14 +3,16 @@ import { Flex, Heading } from "@chakra-ui/react";
 type DashboardCardProps = {
 	children: React.ReactNode;
 	heading?: string;
+	p?: string;
 };
 
-export function DashboardCard({ children, heading }: DashboardCardProps) {
+export function DashboardCard({ children, heading, p }: DashboardCardProps) {
 	return (
 		<Flex
 			direction="column"
+			justify="center"
 			bg="#363447"
-			p="2.9rem 4.8rem"
+			p={p ? p : "2.9rem 4.8rem"}
 			gap="3.2rem"
 			borderRadius="1.6rem"
 			w="fit-content"
