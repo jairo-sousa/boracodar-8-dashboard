@@ -1,6 +1,5 @@
 <h1 align="center"> Dashboard </h1>
 <p align="center">A sales dashboard</p>
-<p align="center">IN PRODUCTION</p>
 
 <a align="center" href="https://regal-monstera-b459cb.netlify.app/">
   <img alt="App preview" src="./.github/preview.svg">
